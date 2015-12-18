@@ -1,0 +1,85 @@
+html,
+body,
+main {
+  height: 100%;
+}
+body {
+  position: relative;
+}
+.header {
+  margin-top: 20px;
+}
+.header td {
+  text-align: left;
+}
+
+.header .company-logo {
+  max-width: 140px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer span {
+  font-size: 32px;
+  font-weight: bold;
+}
+.footer img {
+  vertical-align: baseline;
+  width: 46%;
+  max-width: 180px;
+}
+.clear {
+  clear: both;
+}
+
+.wrp-checkins img {
+  height: 4em;
+  vertical-align: baseline;
+}
+
+.wrp-line3 {
+  margin-top: 30px;
+}
+.wrp-line3 .wrp-find-us {
+  margin-right: 40px;
+}
+.wrp-line3 .wrp-find-us img {
+  width: 20em;
+}
+.wrp-line3 .wrp-offer {
+  text-align: left;
+}
+.wrp-line3 .wrp-offer p {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: bold;
+}
+.wrp-line3 .wrp-offer span {
+  font-size: 48px;
+}
+@media only screen and (max-width: 1024px) {
+  .wrp-like-icon1 {
+    display: none;
+  }
+  .wrp-title {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .wrp-line1,
+  .wrp-line3 {
+    padding-left: 260px;
+  }
+  .wrp-like-icon1 {
+    float: left;
+    margin-right: 50px;
+  }
+  .wrp-like-icon2 {
+    display: none;
+  }
+  .likecounter {
+    float: left;
+  }
+}

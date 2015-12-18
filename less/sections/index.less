@@ -1,0 +1,138 @@
+@pink: #b33068;
+
+#index {
+    .wrp-social-bg {
+    height: 226px;
+    background: url("../img/social-icons.png") repeat-x;
+  }
+
+  .wrp-info {
+    margin-top: 45px;
+  }
+
+  .get-noticed {
+    color: #636bb1;
+    font-size: 44px;
+    margin-bottom: 40px;
+  }
+
+  .wrp-social-channels {
+    max-width: 890px;
+    margin-bottom: 40px;
+  }
+
+  .wrp-channel-icon {
+    margin-bottom: 20px;
+    i {
+      font-size: 52px;
+      color: @pink;
+    }
+  }
+
+  .wrp-steps {
+    margin: 0 auto;
+
+    .step {
+      position: relative;
+      padding-left: 55px;
+
+      +.step {
+        margin-top: 20px;
+      }
+
+      h5 {
+        font-size: 24px;
+        color: @pink;
+      }
+
+      p {
+        color: #414042;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  
+  .how-works {
+    color: #636bb1;
+    padding-left: 20px;
+    font-size: 22px;
+    span {
+      color: @pink;
+    }
+  }
+
+@media screen and (max-width: @screen-sm) {
+
+    .ipad{
+      width:260px;
+  }
+}
+  @media screen and (min-width: @screen-sm) {
+
+    .wrp-steps {
+      max-width: 890px;
+      padding-top: 100px;
+      margin: 0 auto;
+
+      .ipad {
+        margin-top: -30px;
+        width: 100%;
+      }
+    }
+
+      .wrp-menu {
+      float: right;
+
+      ul {
+        margin: 0;
+
+        li {
+          height: 150px;
+          padding: 0;
+
+          a {
+            display: inline-block;
+            height: 100%;
+            padding: 105px 24px 0;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+
+            &.active, &:hover {
+              background-color: #b33068;
+              color: #fff;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
+/*May be we will move it*/
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+.page-wrap {
+  margin: 0 auto 150px;
+}
+
+/* Set the fixed height of the footer here */
+#push, #footer {
+  height: 60px;
+}
+#footer {
+  background-color: #f5f5f5;
+}

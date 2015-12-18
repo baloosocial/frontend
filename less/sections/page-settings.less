@@ -1,0 +1,168 @@
+
+#page-settings {
+
+  padding-top: 20px;
+
+  input {
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .settings-title {
+    color: #5b5b5b;
+    font-size: 14px;
+  }
+
+  .first-col {
+    width: 155px;
+    margin-right: 10px;
+    color: #FFFFFF;
+  }
+
+  .sec-col {
+    width: ~"calc(100% - 155px - 10px)";
+    .flex();
+  }
+
+  .page-type, .page-name, .page-style {
+    line-height: 50px;
+    .first-col {
+      padding-left: 10px;
+    }
+  }
+
+  .page-type .sec-col {
+    padding-left: 10px;
+  }
+
+  .page-settings {
+    .first-col {
+      line-height: 135px;
+      padding-left: 10px;
+    }
+  }
+
+  .page-logo {
+
+    .first-col {
+      line-height: 100px;
+      padding-left: 10px;
+    }
+
+    .sec-col {
+      line-height: 100px;
+    }
+
+    .wrp-page-logo {
+      width: 100px;
+      margin-right: 10px;
+      text-align: center;
+      img {
+        margin: 15px auto;
+      }
+    }
+
+    .wrp-upload {
+      width: ~"calc(100% - 110px)";
+
+      label {
+        padding-left: 10px;
+        width: 100%;
+        cursor: pointer;
+        margin: 0;
+
+        input[type=file] {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+
+  }
+
+  .page-settings {
+    .sec-col {
+      .flex();
+      > label {
+        cursor: pointer;
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+        padding: 25px 0 10px;
+        margin-bottom: 0;
+        font-weight: normal;
+        color: #ffffff;
+        + label {
+          margin-left: 10px;
+        }
+
+        i {
+          font-size: 40px;
+          border: 5px solid #ffffff;
+          border-radius: 5px;
+        }
+
+        input[type=checkbox] {
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          + div {
+            height: 50px;
+            .fa-check {
+              width: 50px;
+              height: 50px;
+              &:before {
+                content: "";
+              }
+            }
+          }
+
+          &:checked + div {
+            .fa-check {
+              &:before {
+                content: "\f00c";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .settings-row {
+    .flex();
+    margin-bottom: 10px;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .bg-dark-blue {
+    background-color: #5d6db3;
+  }
+
+  .bg-light-blue {
+    background-color: #b0b8de;
+  }
+
+  .wrp-save {
+    .save-page-settings {
+      margin: 40px 0 20px;
+      font-size: 24px;
+      background-color: transparent;
+      color: #049b7d;
+      display: inline-block;
+      width: auto;
+    }
+
+    @media screen and (min-width: @screen-md-min) {
+      .save-settings {
+        margin-top: 300px;
+      }
+    }
+
+  }
+
+}
+

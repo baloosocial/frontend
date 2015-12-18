@@ -1,0 +1,100 @@
+header {
+  margin-top: 55px;
+
+
+  .wrp-logo {
+    padding-left: 15px;
+    padding-top: 10px;
+    img {
+      height: 36px;
+    }
+  }
+
+}
+
+.navbar-fixed-top {
+  border: none;
+  border-bottom: 5px solid #b33068;
+}
+
+.navbar-nav {
+  margin: 0 -15px;
+
+  >li {
+    &.active, &:hover {
+      > a {
+        background-color: #b33068 !important;
+        &.dropdown-toggle {
+          background-color: #009e7d !important;
+        }
+        color: #fff !important;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    cursor: pointer !important;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    min-width: auto;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0 !important;
+    background-color: #009e7d;
+
+    > li {
+      > a {
+        padding: 0 15px;
+        line-height: 40px;
+        color: #fff;
+      }
+
+      &.active, &:hover {
+        > a {
+          background-color: #b33068 !important;
+          &.dropdown-toggle {
+            background-color: #009e7d !important;
+          }
+          color: #fff !important;
+        }
+      }
+    }
+
+  }
+
+}
+
+@media screen and (min-width: @screen-sm) {
+
+  header {
+    margin-top: 80px;
+
+    .wrp-logo {
+      padding-top: 20px;
+
+      img {
+        height: 48px;
+      }
+    }
+
+    .navbar-nav {
+      >li {
+        >a {
+          padding-top: 40px;
+
+          &.dropdown-toggle {
+
+          }
+        }
+
+        .dropdown-menu {
+          margin-top: 4px !important;
+        }
+      }
+    }
+  }
+}
