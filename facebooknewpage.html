@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html ng-app="balooSocial.facebook" lang="en">
+<head >
+    <title>Baloosocial.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles/tick.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/facebookmaster.css">
+
+    <style type="text/css">
+        [ngcloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ngform {
+            display: block;
+        }
+
+        /*If you are going to change something here please leav a comment, because this generates from backend*/
+        body{
+            background-color: #ffffff;
+        }
+
+        .wrp-checkins span {
+            color: #ff0281;
+        }
+
+        .likecounter {
+            border-radius: 20px;
+            background-color: #ff0281;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .wrp-offer span {
+            color: #ff0281;
+        }
+
+        .tick-scroll .tick-wheel {
+            background-color: #ffffff;
+            color: #ff0281;
+        }
+
+        .wrp-checkins .tick .tick-separator {
+            color: #ff0281;
+        }
+
+        .tick-flip.tick-active {
+            width: auto;
+            color: #ff0281;
+        }
+
+        .wrp-title {
+           margin-top: 20px;
+           font-size: 3em;
+           font-weight: bold;
+           color:#333;
+        }
+
+
+    </style>
+</head>
+<body ng-controller="balooSocialFacebookContoller as vm" class="container-fluid text-center" ng-cloak>
+    <table style="height: 100%; margin: auto;">
+        <tr class="header">
+            <td>
+                <div ng-show="vm.config.showCompanyLogo">
+                    <img ng-src="{{vm.facebookData.PicURL}}" alt="companylogo" class="company-logo" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="wrp-line1 clearfix">
+                    <div class="wrp-like-icon2 pull-left">
+                        <img src="img/facebook/like-icon.png" style="height: 4em; vertical-align: baseline;" alt="" />
+                    </div>
+                    <div class="wrp-title pull-left" ng-show="vm.config.showPageTitle">{{vm.facebookData.PageName}}</div>
+                    <div class="wrp-checkins pull-right" ng-show="vm.config.showCheckIns">
+                        <img src="img/facebook/location.png" alt="location" />
+                        <span ticker data="vm.facebookDynamicData.CheckIns" separator=",">
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="wrp-likes" style="display: inline-block">
+                    <div class="wrp-like-icon1">
+                        <img src="img/facebook/like-icon.png" alt="like" />
+                    </div>
+                    <div id="likecounter" class="likecounter">
+                        <!--<div class="tick tick-flip"></div>-->
+                        <div ticker data="vm.facebookDynamicData.Likes" init="vm.dataInit(element)" class="tick tick-flip">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrp-line3 clearfix">
+                    <div ng-show="vm.config.showFindUs">
+                        <div class="wrp-find-us pull-left">
+                            <img src="img/facebook/find-us.png" alt="find us" />
+                        </div>
+                    </div>
+                    <!-- We need to implement it -->
+                    <div class="wrp-offer text-left pull-left">
+                        <!-- <p>AND GET <span>20% OFF</span><br>TILL 14:00 pm</p>-->
+                        {{vm.config.promotionText}}
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr class="footer">
+            <td>
+                <span>powered by </span>
+                <img src="img/facebook/baloosocial.png" alt="baloosocial.com" />
+            </td>
+        </tr>
+    </table>
+
+    <!-- this is to stay always login chjnjes Hayko-->
+    <iframe src="/RefreshPage.aspx" style="display: none"></iframe>
+
+    <script src="Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.easing.js" type="text/javascript"></script>
+    <script src="Scripts/tick.js" type="text/javascript"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="Scripts/application/shared/directives/ticker.js"></script>
+
+    <script src="Scripts/application/serviceapi/serviceapi.module.js"></script>
+    <script src="Scripts/application/serviceapi/serviceapi.service.js"></script>
+
+    <script src="Scripts/application/facebook/baloosocial.facebook.module.js"></script>
+    <script src="Scripts/application/facebook/baloosocial.facebook.controller.js"></script>
+    <script src="Scripts/application/facebook/baloosocial.facebook.service.js"></script>
+
+    <script>
+        angular.module("balooSocial.facebook").value("showPageTitle","Armenia");
+        angular.module("balooSocial.facebook").value("showFindUs","true");
+        angular.module("balooSocial.facebook").value("showCompanyLogo","true");
+        angular.module("balooSocial.facebook").value("showCheckIns","true");
+        angular.module("balooSocial.facebook").value("promotionText","rrrr");
+        angular.module("balooSocial.facebook").value("uploadedLogo","");
+    </script>
+
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>

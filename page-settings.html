@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" />
+    <meta name="author" />
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="Styles/master.css" />
+</head>
+<body id="index">
+<form method="post" action="" id="mainform">
+
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="wrp-logo pull-left">
+                        <img src="img/logo.png">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/#about">About Baloo</a></li>
+                        <li><a href="/#howitworks">How it works</a></li>
+                        <li><a href="/#contactus">Contact us</a></li>
+
+                        <li>
+
+                            <a href="/admin/login.aspx">Login</a>
+
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+    <div class="page-wrap">
+
+
+        <main id="page-settings">
+
+            <div class="container">
+
+                <h4 class="settings-title">PAGE SETTINGS</h4>
+                <div class="settings-row page-type">
+                    <div class="first-col bg-dark-blue">
+                        Page Type
+                    </div>
+                    <div class="sec-col bg-light-blue">
+                        Facebook Page
+                    </div>
+                </div>
+
+                <div class="settings-row page-name">
+                    <div class="first-col bg-dark-blue">
+                        Page name/Page ID
+                    </div>
+                    <div class="sec-col bg-light-blue">
+                        <input type="text" placeholder="For example: adidas">
+                    </div>
+                </div>
+
+                <div class="settings-row page-logo">
+                    <div class="first-col bg-dark-blue">
+                        Page Logo
+                    </div>
+                    <div class="sec-col">
+                        <div class="wrp-page-logo bg-light-blue">
+                            <img src="img/logo-preview.png">
+                        </div>
+                        <div class="wrp-upload">
+                            <label class="bg-light-blue" for="file">
+                                <input type="file" id="file">
+                                <i class="fa fa-file-image-o"></i> Drag a photo here or Choose file
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-row page-settings">
+                    <div class="first-col bg-dark-blue">
+                        Page Settings
+                    </div>
+                    <div class="sec-col">
+                        <label class="bg-light-blue" for="showName">
+                            <input type="checkbox" id="showName">
+                            <div>
+                                <i class="fa fa-check"></i>
+                            </div>
+                            Show name
+                        </label>
+                        <label class="bg-light-blue">
+                            <input type="checkbox">
+                            <div>
+                                <i class="fa fa-check"></i>
+                            </div>
+                            Show logo
+                        </label>
+                        <label class="bg-light-blue">
+                            <input type="checkbox">
+                            <div>
+                                <i class="fa fa-check"></i>
+                            </div>
+                            Facebook
+                            <br>
+                            Find Us
+                        </label>
+                        <label class="bg-light-blue">
+                            <input type="checkbox">
+                            <div>
+                                <i class="fa fa-check"></i>
+                            </div>
+                            Facebook
+                            <br>
+                            Check In
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-row page-style">
+                    <div class="first-col bg-dark-blue">
+                        Promotion text
+                    </div>
+                    <div class="sec-col bg-light-blue">
+                        <input type="text" placeholder="For example: Like us and Get 20% off from 14:00-18:00">
+                    </div>
+                </div>
+
+                <div class="settings-row page-style">
+                    <div class="first-col bg-dark-blue">
+                        Background color
+                    </div>
+                    <div class="sec-col bg-light-blue">
+                        <input type="text" placeholder="For example: #d7d7d7">
+                    </div>
+                </div>
+
+                <div class="settings-row page-style">
+                    <div class="first-col bg-dark-blue">
+                        Font color
+                    </div>
+                    <div class="sec-col bg-light-blue">
+                        <input type="text" placeholder="For example: #d7d7d7">
+                    </div>
+                </div>
+
+                <div class="settings-row page-style">
+                    <div class="first-col bg-dark-blue">
+                        Font Type
+                    </div>
+                    <div class="sec-col bg-light-blue">
+                        <input type="text" placeholder="For example: Verdana">
+                    </div>
+                </div>
+
+                <div class="wrp-save clearfix">
+                    <input type="submit" class="link-green save-page-settings pull-right" value="SAVE PAGE SETTINGS">
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+
+        <div>
+
+            <div class="wrp-footer container">
+
+                <div class="col-sm-12 col-md-8">
+                    <div id="contactus" class="wrp-contacts-form" action="#">
+                        <div class="col-sm-6">
+                            <input type="text" class="Name, surname" placeholder="Name" />
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="email" type="email" placeholder="E-mail" />
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea rows="7" cols="20" class="message" placeholder="Your message"></textarea>
+                        </div>
+                        <div class="col-sm-12 text-right">
+                            <input type="submit" value="SEND MESSAGE"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrp-follow-us col-sm-12 col-md-4">
+
+                    <div class="follow-us">
+                        <div>
+                            <img src="img/foot-white.png"> FOLLOW US ON
+                        </div>
+
+                        <ul class="wrp-social-icons list-inline">
+
+                            <li>
+                                <a href="#"><i class="fa fa-facebook-official"></i></a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fa fa-twitter-square"></i></a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="fa fa-google-plus-square"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="wrp-copyright">
+                        <i class="fa fa-copyright"></i> 2015 Baloo.social
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+</form>
+<script type="text/javascript" src="Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".nav.navbar-nav.navbar-right li").on("click", function (e) {
+            $(this).parent().find("li").removeClass("active");
+            $(this).addClass("active");
+            if (!$(this).find(".dropdown-toggle").length)
+                $("#navbar").removeClass("in");
+
+            //$(".navbar-toggle").click() //bootstrap 3.x by Richard
+        });
+    });
+</script>
+
+</body>
+</html>
