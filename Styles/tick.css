@@ -77,7 +77,6 @@
 .tick-flip .tick-old {
     display: block;
     border-radius: 4px;
-    /* background: $old_gradient; */
     background-color: white;
     *zoom: 1;
 }

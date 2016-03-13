@@ -1,0 +1,64 @@
+﻿<table class="main-table" cellpadding="0" cellspacing="0">
+
+    <tbody>
+
+        <tr>
+
+            <td class="td-like-us" style="width: 10%;">
+
+                <div>
+                    <img class="like-icon" src="img/facebook/like-icon.png" alt="like">
+                </div>
+
+                <p class="like-us">Like us on <span style="text-transform: uppercase">Facebook</span></p>
+
+            </td>
+
+            <td style="width: 40%; text-align: left; vertical-align: bottom;">
+                <div class="wrp-likes">
+
+                    <div id="likecounter" class="likecounter">
+
+                        <div ticker="" data="vm.facebookDynamicData.Likes" init="vm.dataInit(element)" class="tick tick-flip tick-active"></div>
+
+                    </div>
+
+                </div>
+            </td>
+
+            <td class="td-check-ins" >
+
+
+
+                <div class="check-in-title">
+                    <b>Check-ins on FACEBOOK</b>
+                </div>
+
+                <div class="check-in-content" ng-show="vm.config.showCheckIns">
+
+                    <img class="location-icon" src="img/facebook/location_ameria.png" alt="Location">
+
+                    <span ticker="" data="vm.facebookDynamicData.CheckIns" separator="," class="tick-active"><span>9</span><span>7</span></span>
+
+                </div>
+
+            </td>
+
+            <td class="td-pwered-by">
+                <div style="border-style:solid; border-radius: 20px;border-color: #ffffff;text-align: center;padding: 10px;">
+                    <p class="powered-by">powered by</p>
+
+                    <div>
+
+                        <img class="logo" src="img/logo-white-trim.png" alt="baloosocial.com">
+
+                    </div>
+                </div>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>

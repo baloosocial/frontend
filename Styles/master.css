@@ -7350,12 +7350,10 @@ textarea {
 #instagram .slick-slider {
   margin: auto 20px;
 }
-#instagram .slick-slide img {
-  display: inline-block;
-}
 #instagram .slide-item {
   display: table;
   margin: 20px auto;
+  width: 100%;
   -moz-box-shadow: 0 0 20px #484848;
   -webkit-box-shadow: 0 0 20px #484848;
   box-shadow: 0 0 20px #484848;
@@ -7410,7 +7408,6 @@ textarea {
 }
 #instagram .slide-item .slide-right {
   width: 80%;
-  max-width: 532px;
   background-color: #FFFFFF;
   text-align: center;
   position: relative;

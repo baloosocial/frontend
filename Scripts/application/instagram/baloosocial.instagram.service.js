@@ -9,7 +9,7 @@
         var _self = this;
 
         _self.getInstagramData = function (data) {
-            return serviceApiService.get("/instagramgetdata/-1/19");
+            return serviceApiService.get("/instagramgetdata/-1/10");
         }
 
     }

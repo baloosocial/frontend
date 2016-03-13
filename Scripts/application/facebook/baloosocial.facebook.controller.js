@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    function balooSocialFacebookContoller($scope, $location, $interval, balooSocialFacebookService, showPageTitle, showFindUs, showCompanyLogo, showCheckIns, promotionText, uploadedLogo) {
+    function balooSocialFacebookContoller($scope, $location, $interval, $sce, balooSocialFacebookService, showPageTitle, showFindUs, showCompanyLogo, showCheckIns, promotionText, uploadedLogo, cssInjector, htmlTemplate, cssTemplate) {
         var _self = this;
 
         _self.config = {};
@@ -12,43 +12,55 @@
         _self.config.showCheckIns = showCheckIns === 'true';
         _self.config.promotionText = promotionText;
 
+        if (htmlTemplate !== '') {
+            _self.templateURL = htmlTemplate;
+        }  else {
+            _self.templateURL = "/socialpages/templates/facebook/default.html";
+        }
+
         var location = $location.search();
 
+        //inject css
+        if(cssTemplate !== '')
+            cssInjector.add(cssTemplate);
+
+        _self.deliberatelyTrustDangerousSnippet = function () {
+            return $sce.trustAsHtml(_self.config.promotionText);
+        };
+
         _self.getFacebookData = function () {
-            var sendData = { authToken: '-1', pageName: location.pagename }
+            var sendData = {
+                authToken: '-1', pageName: location.pagename
+            };
             balooSocialFacebookService.getFacebookData(sendData)
-            .then(function (response) {
-                _self.facebookData = response.data;
-                setLikeIconHeight();
-                if (uploadedLogo !== '') {
-                    _self.facebookData.PicURL = uploadedLogo.replace("~","");
-                }
-            }, function (response) {
-            });
-        }
+                .then(function (response) {
+                    _self.facebookData = response.data;
+                    ///setLikeIconHeight();
+                    if (uploadedLogo !== '') {
+                        _self.facebookData.PicURL = uploadedLogo.replace("~","");
+                    }
+                }, function (response) {
+                });
+        };
 
         _self.getFacebookDynamicData = function () {
             var sendData = { authToken: '-1', pageName: location.pagename }
-            balooSocialFacebookService.getFacebookDynamicData(sendData)
-            .then(function (response) {
-
-
+            balooSocialFacebookService.getFacebookDynamicData(sendData).then(function (response) {
                 if (angular.toJson(_self.facebookDynamicData) !== angular.toJson(response.data)) {
                     _self.facebookDynamicData = response.data;
                 }
             }, function (response) {
+
             });
-        }
+        };
 
         _self.dataInit = function () {
-
-            setLikeIconHeight();
-            
-        }
+            //setLikeIconHeight();
+        };
 
         var setLikeIconHeight = function () {
             setStyles();
-            var likeIconHeight = $(".likecounter").outerHeight()
+            var likeIconHeight = $(".likecounter").outerHeight();
             $(".wrp-like-icon1 img").height(likeIconHeight);
         };
 
@@ -93,29 +105,35 @@
 
         };
 
-        $(window).on('resize', function () {
-            setLikeIconHeight();
-        });
+        //$(window).on('resize', function () {
+        //    setLikeIconHeight();
+        //});
 
         _self.getFacebookData();
         _self.getFacebookDynamicData();
 
-        $interval(function () { _self.getFacebookDynamicData(); }, 2000);
-    }
+        $interval(function () {
+            _self.getFacebookDynamicData();
+        }, 2000);
+    };
 
     //BalooSocialInstagram.$inject = ['$scope'];
 
     angular.module('balooSocial.facebook')
         .controller('balooSocialFacebookContoller', ['$scope',
-                                                        '$location',
-                                                        '$interval',
-                                                        'balooSocialFacebookService',
-                                                        'showPageTitle',
-                                                        'showFindUs',
-                                                        'showCompanyLogo',
-                                                        'showCheckIns',
-                                                        'promotionText',
-                                                        'uploadedLogo',
-                                                        balooSocialFacebookContoller
-                                                        ]);
+            '$location',
+            '$interval',
+            '$sce',
+            'balooSocialFacebookService',
+            'showPageTitle',
+            'showFindUs',
+            'showCompanyLogo',
+            'showCheckIns',
+            'promotionText',
+            'uploadedLogo',
+            'cssInjector',
+            'htmlTemplate',
+            'cssTemplate',
+            balooSocialFacebookContoller
+        ]);
 })();

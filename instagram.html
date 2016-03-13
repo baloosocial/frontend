@@ -2,6 +2,11 @@
 <html ng-app="balooSocial.instagram" xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Instagram Page</title>
+
+    <base href="baloosocial.com">
+
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
     <style type="text/css">
         [ngcloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
             display: none !important;
@@ -84,10 +89,16 @@
     angular.module("balooSocial.instagram").value("showPostedUser", "true");
     angular.module("balooSocial.instagram").value("showCompanyLogo", "true");
     angular.module("balooSocial.instagram").value("backgroundStyle", "background: #10141d radial-gradient(circle, #5870ba, #10141d 100%);");
-    angular.module("balooSocial.instagram").value("slideFromDownToUp", "false");
+    angular.module("balooSocial.instagram").value("slideFromDownToUp", "true");
 </script>
 
 <script src="Scripts/application/serviceapi/serviceapi.module.js"></script>
 <script src="Scripts/application/serviceapi/serviceapi.service.js"></script>
+
+
+<script src="Scripts/application/slick-responsive/slick-responsive-module.js"></script>
+<script src="Scripts/application/slick-responsive/slick-responsive-directive.js"></script>
+
+
 </body>
 </html>

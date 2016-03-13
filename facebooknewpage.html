@@ -118,30 +118,32 @@
         </tr>
     </table>
 
-    <!-- this is to stay always login chjnjes Hayko-->
-    <iframe src="/RefreshPage.aspx" style="display: none"></iframe>
-
     <script src="Scripts/jquery.min.js" type="text/javascript"></script>
     <script src="Scripts/jquery.easing.js" type="text/javascript"></script>
     <script src="Scripts/tick.js" type="text/javascript"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-sanitize.min.js"></script>
     <script src="Scripts/application/shared/directives/ticker.js"></script>
 
     <script src="Scripts/application/serviceapi/serviceapi.module.js"></script>
     <script src="Scripts/application/serviceapi/serviceapi.service.js"></script>
+
+    <script src="Scripts/application/vendors/angular-css-injector.min.js"></script>
 
     <script src="Scripts/application/facebook/baloosocial.facebook.module.js"></script>
     <script src="Scripts/application/facebook/baloosocial.facebook.controller.js"></script>
     <script src="Scripts/application/facebook/baloosocial.facebook.service.js"></script>
 
     <script>
-        angular.module("balooSocial.facebook").value("showPageTitle","Armenia");
-        angular.module("balooSocial.facebook").value("showFindUs","true");
-        angular.module("balooSocial.facebook").value("showCompanyLogo","true");
-        angular.module("balooSocial.facebook").value("showCheckIns","true");
-        angular.module("balooSocial.facebook").value("promotionText","rrrr");
-        angular.module("balooSocial.facebook").value("uploadedLogo","");
+        angular.module("balooSocial.facebook").value("showPageTitle",'false');
+        angular.module("balooSocial.facebook").value("showFindUs",'false');
+        angular.module("balooSocial.facebook").value("showCompanyLogo",'false');
+        angular.module("balooSocial.facebook").value("showCheckIns",'true');
+        angular.module("balooSocial.facebook").value("promotionText",'<p style="font-size: 40px; font-weight: bold; color:#0E43FF;">Like Us On Facebook</p>');
+        angular.module("balooSocial.facebook").value("uploadedLogo",'');
+        angular.module("balooSocial.facebook").value("htmlTemplate",'project/ameria/tpl.html');
+        angular.module("balooSocial.facebook").value("cssTemplate", 'project/ameria/style.css');
     </script>
 
     <script src="Scripts/bootstrap.min.js"></script>

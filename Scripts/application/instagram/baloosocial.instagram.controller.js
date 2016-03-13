@@ -23,11 +23,11 @@
                 }
             }, function (response) {
             });
-        }
+        };
         _self.getInstagramData();
         
 
-        $interval(function () { _self.getInstagramData(); }, 98000);
+        $interval(function () { _self.getInstagramData(); }, 980000000000000);
     }
 
     //BalooSocialInstagram.$inject = ['$scope'];
